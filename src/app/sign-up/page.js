@@ -24,7 +24,7 @@ export default function SignUpPage() {
   const submit = async (formData) => {
     const { data } = await axios.post('/api/sign-up', formData);
 
-    if (data) router.push('sign-in', { query: { confirmToken: data } });
+    if (data) router.push('sign-up', { query: { confirmToken: data } });
   };
 
   return (

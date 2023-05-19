@@ -22,7 +22,7 @@ export default function SignInPage() {
   const submit = async (formData) => {
     const { data } = await axios.post('/api/sign-in', formData);
 
-    // if (data)
+    if (data) router.push('sign-in', { query: { confirmToken: data } });
   };
 
   return (
